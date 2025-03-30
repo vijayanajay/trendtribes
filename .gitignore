@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.py,cover
+*.so
+.Python
+.backup
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+env/
+
+# Django
+*.log
+*.pot
+*.sqlite3
+media/
+uploads/
+local_settings.py
+db.sqlite3
+.env
+.env*.local
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+test.db
+
+# OS generated
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.stackdump
+
+# Output directories
+/dist/
+/node_modules/
+/bower_components/
+/.cache/
+/staticfiles/
+
+# Media and Static files
+/mediafiles/
+/staticfiles/
+/static/css/dist/
