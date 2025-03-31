@@ -1,9 +1,9 @@
 ---
-description:
-globs:
+description: 
+globs: 
 alwaysApply: true
 ---
-# cursor.yaml - Django on Railway.app Coding Standards
+# cursor.yaml - Django on Render Coding Standards
 # Inspired by Sindre Sorhus, Ryan Dahl, Dan Abramov, Armin Ronacher, Kenneth Reitz
 
 ### Directory Structure
@@ -30,7 +30,7 @@ directory_structure:
       - "templates/"
       - "static/"
       - "media/"
-      - "railway.json"
+      - "render.yaml"
 
 ### File Naming Conventions
 file_naming:
@@ -119,7 +119,7 @@ optimization:
   caching:
     - "Use Django's cache framework for expensive operations"
     - "Implement template fragment caching for complex templates"
-    - "Use Redis as cache backend for Railway.app deployments"
+    - "Use Redis as cache backend for Render deployments"
 
 ### Memory Management
 memory_management:
@@ -149,7 +149,7 @@ vulnerabilities:
     - "XSS: Use Django's template escaping and form validation"
     - "CSRF: Always use Django's CSRF protection middleware"
     - "SQL Injection: Use Django's ORM and avoid raw queries"
-    - "Sensitive Data Exposure: Use Railway.app environment variables"
+    - "Sensitive Data Exposure: Use Render environment variables"
 
 ### Input Validation
 input_validation:
@@ -173,8 +173,8 @@ data_protection:
   rules:
     - "Store sensitive data in encrypted form"
     - "Use Django's SECRET_KEY for cryptographic operations"
-    - "Store secrets in Railway.app environment variables"
-    - "Use Railway.app's built-in SSL"
+    - "Store secrets in Render environment variables"
+    - "Use Render's built-in SSL"
 
 ### Secure API Communication
 api_security:
@@ -230,10 +230,10 @@ pitfalls:
     - "N+1 query problems"
     - "Using count() instead of exists() for checking existence"
     - "Not using select_related/prefetch_related for related objects"
-  railway_specific:
-    - "Not configuring environment variables properly"
-    - "Ignoring resource limits"
-    - "Not setting up proper database backups"
+  render_specific:
+    - "Not configuring environment variables properly in Render"
+    - "Ignoring Render's resource limits"
+    - "Not setting up automated database backups"
 
 ### Frequent Mistakes
 frequent_mistakes:
@@ -264,11 +264,11 @@ version_issues:
 ### Compatibility Concerns
 compatibility:
   database:
-    - "Railway.app uses PostgreSQL by default"
+    - "Render uses PostgreSQL by default"
     - "Use Django's database abstraction layer"
     - "Test with the same database engine as production"
   deployment:
-    - "Consider containerization compatibility"
+    - "Consider containerization compatibility with Render"
     - "Test with the same Python version as production"
 
 ### Debugging Strategies
@@ -277,7 +277,7 @@ debugging:
     - "Django Debug Toolbar"
     - "Python Debugger (pdb)"
     - "Logging with different log levels"
-    - "Railway.app logs"
+    - "Render logs"
 
 ### Recommended Development Tools
 development_tools:
@@ -287,13 +287,13 @@ development_tools:
     - "black (code formatter)"
     - "isort (import formatter)"
     - "pytest with pytest-django"
-    - "Railway CLI"
+    - "Render CLI"
 
 ### Build Configuration
 build_configuration:
-  railway:
-    - "Use railway.json for configuration"
-    - "Configure build commands in Railway dashboard"
+  render:
+    - "Use render.yaml for Blueprint configuration"
+    - "Configure build commands in Render dashboard"
     - "Set up proper environment variables"
 
 ### Linting and Formatting
@@ -306,17 +306,17 @@ linting:
 
 ### Deployment Best Practices
 deployment:
-  railway:
+  render:
     - "Use pipenv or Poetry for dependency management"
     - "Set DEBUG=False in production"
     - "Use environment variables for secrets"
-    - "Configure proper logging"
-    - "Set up database backups"
+    - "Configure Render's logging settings"
+    - "Enable automated database backups"
 
 ### CI/CD Integration
 cicd:
-  railway:
-    - "Railway automatically deploys on push to configured branch"
-    - "Set up GitHub Actions for testing before deployment"
-    - "Use separate environments for staging and production"
-    - "Configure proper branch protections"
+  render:
+    - "Render Auto-Deploy from connected Git repository"
+    - "Use separate Render services for staging and production"
+    - "Implement health checks and deploy hooks"
+    - "Configure proper branch protections in Git"
