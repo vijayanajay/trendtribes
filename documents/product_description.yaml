@@ -1,0 +1,123 @@
+product_description_document:
+  product_name: "Vortex - Ultimate Indian Market Heatmap"
+  product_type: "Progressive Web Application"
+  technology_stack:
+    backend:
+      framework: "Django 4.2+"
+      language: "Python 3.10+"
+      api_framework: "Django REST Framework"
+      task_queue: "Celery"
+      message_broker: "Redis"
+      realtime_layer: "WebSockets (Django Channels)"
+    frontend:
+      styling_framework: "Tailwind CSS + DaisyUI"
+      javascript_framework: "Alpine.js + HTMX"
+      visualization_library: "Plotly.js + WebGL optimization"
+      performance: "Workbox for service workers"
+    database:
+      primary_db: "PostgreSQL (TimescaleDB extension)"
+      caching_db: "Redis (AWS MemoryDB)"
+      analytics_db: "Columnar storage for historical metrics"
+    hosting:
+      cloud_provider: "AWS"
+      services:
+        - "Elastic Beanstalk"
+        - "RDS"
+        - "MemoryDB"
+        - "CloudFront CDN"
+  overview:
+    description: |
+      The world's most granular stock heatmap platform focused exclusively on Indian markets, combining institutional-grade data analysis with consumer-friendly visualization. Built as a zero-compromise PWA that rivals native app performance.
+    target_audience:
+      - Algorithmic Traders
+      - Hedge Fund Analysts
+      - Retail Investors
+      - Financial Media
+    monetization_strategy:
+      type: "Non-intrusive Advertising + Data Partnerships"
+      provider: "Google AdSense + Contextual Finance Ads"
+      ad_placement: "Smart banners activated during idle moments"
+  core_features:
+    dynamic_heatmap_visualizations:
+      market_coverage:
+        - "Nifty 500 (Full universe)"
+        - "All sector indices"
+        - "F&O liquidity heatmapping"
+      enhanced_metrics:
+        volatility_index:
+          description: "Bollinger Band width visualization"
+          implementation: "20-day rolling volatility calculation"
+        liquidity_depth:
+          description: "Order book depth heatmap (derived from volume)"
+        momentum_gradient:
+          description: "13/26/52-week momentum convergence"
+      timeframe_flexibility:
+        supported_timeframes:
+          - "15-year historical patterns"
+          - "Election cycle analysis (5-year intervals)"
+          - "Seasonal patterns (90-day rolling)"
+      interactive_elements:
+        matrix_comparison:
+          description: "Drag-and-drop sector vs sector heatmap comparison"
+          implementation: "WebGL-optimized rendering"
+        anomaly_detection:
+          description: "Auto-highlight stocks deviating from sector patterns"
+    data_pipeline:
+      data_sources:
+        primary_source: "Yahoo Finance API"
+        enhanced_processing:
+          - "OHLCV-to-metric conversion engine"
+          - "Derivative indicators calculator"
+      automation:
+        data_processing:
+          library: "Pandas + Numba"
+          tasks:
+            - "Automated outlier detection"
+            - "Multi-timeframe metric pre-computation"
+            - "Volatility surface modeling"
+    responsive_ui_ux:
+      progressive_web_app:
+        features:
+          - "Offline heatmap access (cached data)"
+          - "Push notifications for major market shifts"
+          - "Installable to desktop/mobile home screen"
+      performance:
+        - "Sub-100ms interaction latency"
+        - "WebAssembly-accelerated calculations"
+  technical_architecture:
+    backend_architecture:
+      django_optimizations:
+        - "APSL (Asynchronous Python Stock Layer) for concurrent data processing"
+        - "Columnar data caching using Parquet format"
+      database_architecture:
+        timescale_features:
+          - "Hypertables for decade-scale data"
+          - "Continuous aggregates for common queries"
+    frontend_architecture:
+      visualization_engine:
+        - "WebGL-powered heatmap renderer"
+        - "GPU-accelerated metric computations"
+      offline_first:
+        - "IndexedDB for local metric storage"
+        - "Background sync capabilities"
+  deployment_and_hosting:
+    aws_optimizations:
+      - "Global Accelerator for low-latency access"
+      - "Lambda@Edge for metric pre-processing"
+      - "S3 Intelligent Tiering for historical data"
+  monetization:
+    ad_innovation:
+      - "Financial instrument context ads (example: display derivatives ads when viewing F&O heatmap)"
+      - "Non-invasive sponsored heatmap layers (bank-branded sector analysis)"
+  scalability_and_future_considerations:
+    data_science_ready:
+      - "Vector similarity search indexing for pattern matching"
+      - "Pre-computed embeddings for 100+ technical patterns"
+    zero_cost_engagement:
+      - "Institutional-grade API (free tier with attribution)"
+      - "Public metrics dashboard for financial journalists"
+      - "Embeddable heatmap widgets for bloggers"
+    forbidden_features:
+      - "No user-generated content systems"
+      - "No educational materials"
+      - "No social features"

@@ -1,0 +1,330 @@
+project: 
+  name: "Indian Stock Market Heatmap MVP"
+  stages:
+    stage_1_foundation:
+      description: "Core Infrastructure Setup"
+      tasks:
+        project_initialization:
+          1_basic_setup: - completed
+            - Create new Django project using django-admin
+            - Setup virtual environment with Python 3.10+
+            - Create requirements.txt with core dependencies
+            - Initialize git repository
+          2_settings_configuration: - completed
+            - Split settings into base/dev/prod
+            - Configure debug settings
+            - Setup secret key management
+            - Create initial .env structure
+          3_static_media_setup: - completed
+            - Configure static files settings
+            - Setup media files structure
+            - Create base templates directory
+            - Setup static files serving
+          
+        database_setup:
+          1_postgres_local: - completed
+            - Install psycopg2 dependencies 
+            - Create local PostgreSQL database
+            - Configure database URL in .env
+            - Test database connection
+          2_django_db_setup: - completed
+            - Configure database settings in Django
+            - Create initial Django admin user
+            - Run first migrations
+            - Test admin interface access
+          3_backup_configuration: - completed
+            - Create backup scripts directory
+            - Setup basic pg_dump script
+            - Configure backup scheduling
+            - Test backup/restore process
+          
+          render_setup:
+            1_initial_setup:
+              steps:
+                - Create Render.com account
+                - Connect GitHub repository
+                - Create new Web Service
+                - Configure build settings
+              estimated_time: "1h"
+            
+            2_deployment_config:
+              steps:
+                - Setup environment variables
+                - Configure Render PostgreSQL
+                - Create start command
+                - Setup health check endpoint
+              estimated_time: "1h"
+            
+            3_static_files_setup:
+              steps:
+                - Configure whitenoise for static files
+                - Setup static files collection
+                - Configure static URL
+                - Test static file serving
+              estimated_time: "1h"
+            
+            4_deployment_testing:
+              steps:
+                - Deploy initial application
+                - Test auto-deployment from main branch
+                - Verify database migrations
+                - Setup deployment notifications
+              estimated_time: "1h"
+          
+    stage_2_data_pipeline:
+      description: "Data Infrastructure"
+      tasks:
+        data_models:
+          1_base_models:
+            - Create Stock model (symbol, name, sector)
+            - Add model validators and tests
+            - Create initial migrations
+            - Add admin interface customization
+          2_price_models:
+            - Create PriceHistory model
+            - Setup timestamp and price fields
+            - Add data validation methods
+            - Create model tests
+          3_sector_models:
+            - Create SectorMapping model
+            - Setup relationship with Stock model
+            - Add sector hierarchy logic
+            - Create data migration for sectors
+          
+        api_integration:
+          1_basic_client:
+            - Setup Yahoo Finance API client class
+            - Implement basic error handling
+            - Create configuration structure
+            - Add client tests
+          2_rate_limiting:
+            - Implement rate limiting decorator
+            - Create request queue system
+            - Add retry mechanism
+            - Test rate limiting
+          3_data_validation:
+            - Create response validators
+            - Setup error logging
+            - Implement data cleaning
+            - Add validation tests
+          
+        etl_setup:
+          1_celery_config:
+            - Install and configure Celery
+            - Setup Redis connection
+            - Create basic task structure
+            - Test task execution
+          2_logging_system:
+            - Setup structured logging
+            - Create log handlers
+            - Implement log rotation
+            - Add monitoring alerts
+          
+        data_fetching:
+          1_symbols_fetcher:
+            - Create Nifty50 symbols fetcher
+            - Implement data validation
+            - Add storage logic
+            - Create fetcher tests
+          2_price_fetcher:
+            - Implement price data fetcher
+            - Add data transformation
+            - Setup storage logic
+            - Create fetcher tests
+          
+    stage_3_visualization_core:
+      description: "Basic Visualization Setup"
+      tasks:
+        frontend_setup:
+          1_tailwind_setup:
+            - Install Tailwind CSS
+            - Configure build process
+            - Create base styles
+            - Setup development workflow
+          2_template_structure:
+            - Create base template
+            - Setup template inheritance
+            - Add common components
+            - Create layout blocks
+          3_alpine_integration:
+            - Install Alpine.js
+            - Create basic components
+            - Setup state management
+            - Add interaction handlers
+          
+        heatmap_foundation:
+          1_grid_system:
+            - Create CSS grid layout
+            - Setup responsive breakpoints
+            - Implement size calculations
+            - Add grid tests
+          2_color_system:
+            - Create color scale utilities
+            - Implement gradient functions
+            - Setup theme variables
+            - Add color tests
+          3_basic_animations:
+            - Create transition utilities
+            - Setup loading states
+            - Implement hover effects
+            - Add animation tests
+          
+        styling_system:
+          1_color_scheme:
+            - Define color variables
+            - Create theme mixins
+            - Setup dark mode toggle
+            - Add theme tests
+          2_typography:
+            - Setup font system
+            - Create text utilities
+            - Implement responsive text
+            - Add typography tests
+          3_components:
+            - Create button styles
+            - Setup card components
+            - Implement form styles
+            - Add component tests
+          
+    stage_4_mvp_features:
+      description: "Core Functionality"
+      tasks:
+        heatmap_core:
+          1_data_structure:
+            - Create HeatmapData class
+            - Implement data normalization
+            - Setup price change calculations
+            - Add unit tests
+          2_color_mapping:
+            - Create ColorScale utility class
+            - Implement percentage to color mapping
+            - Setup gradient generation
+            - Add color mapping tests
+          3_data_endpoints:
+            - Create heatmap API view
+            - Implement data serialization
+            - Add caching decorator
+            - Create endpoint tests
+          
+        interaction_features:
+          1_tooltip_system:
+            - Create tooltip component
+            - Setup stock data display
+            - Implement positioning logic
+            - Add tooltip tests
+          2_event_handlers:
+            - Implement hover detection
+            - Setup click handlers
+            - Create event delegation
+            - Add interaction tests
+          3_state_management:
+            - Create loading states
+            - Implement error handling
+            - Setup success feedback
+            - Add state tests
+          
+        performance:
+          1_data_caching:
+            - Setup Redis caching
+            - Implement cache invalidation
+            - Create cache warmup
+            - Add cache tests
+          2_query_optimization:
+            - Add database indexes
+            - Optimize ORM queries
+            - Setup query logging
+            - Measure performance
+          3_frontend_optimization:
+            - Implement lazy loading
+            - Setup asset compression
+            - Add browser caching
+            - Test performance metrics
+          
+        error_handling:
+          1_backend_errors:
+            - Create error middleware
+            - Setup error logging
+            - Implement retry logic
+            - Add error tests
+          2_frontend_errors:
+            - Create error boundary
+            - Setup error notifications
+            - Implement fallbacks
+            - Add error recovery tests
+          3_monitoring:
+            - Setup error tracking
+            - Create health checks
+            - Implement alerts
+            - Test monitoring system
+          
+    stage_5_monetization:
+      description: "Basic Revenue Setup"
+      tasks:
+        adsense_integration:
+          1_account_setup:
+            - Create Google AdSense account
+            - Add site verification meta tags
+            - Submit site for review
+            - Document approval process
+          2_ad_containers:
+            - Create header ad component
+            - Add below-legend ad slot
+            - Setup responsive ad units
+            - Add placeholder styling
+          3_fallback_system:
+            - Create ad blocker detection
+            - Implement fallback content
+            - Setup tracking events
+            - Test different scenarios
+          
+        analytics_setup:
+          1_ga4_integration:
+            - Create Google Analytics 4 account
+            - Add tracking code
+            - Setup basic events
+            - Test data collection
+          2_custom_events:
+            - Implement heatmap interaction events
+            - Add performance timing events
+            - Setup conversion tracking
+            - Create event tests
+          3_dashboard_setup:
+            - Create custom GA4 dashboard
+            - Setup key metrics display
+            - Add automated reports
+            - Test data visualization
+          
+        monitoring_system:
+          1_error_tracking:
+            - Setup Sentry integration
+            - Configure error grouping
+            - Add custom context
+            - Test error capturing
+          2_performance_monitoring:
+            - Setup server monitoring
+            - Create performance alerts
+            - Implement uptime checks
+            - Add response time tracking
+          3_logging_dashboard:
+            - Setup centralized logging
+            - Create log visualization
+            - Implement log search
+            - Add alert rules
+          
+        testing_infrastructure:
+          1_load_testing:
+            - Setup k6 test scripts
+            - Create performance scenarios
+            - Implement threshold checks
+            - Add CI integration
+          2_synthetic_monitoring:
+            - Setup uptime monitoring
+            - Create endpoint checks
+            - Implement SSL monitoring
+            - Add status page
+          3_alert_system:
+            - Setup email notifications
+            - Create Slack integration
+            - Implement alert rules
+            - Test notification flow
+          

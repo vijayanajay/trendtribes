@@ -1,0 +1,98 @@
+phased_development_plan:
+  phase_1:
+    name: "MVP Core Heatmap Engine"
+    duration: "3 months"
+    tech_stack:
+      backend: "Django 4.2 + PostgreSQL"
+      frontend: "Tailwind CSS + Plotly.js"
+      hosting: "AWS Elastic Beanstalk + RDS"
+    features:
+      - "Nifty 50/Sensex 30 basic heatmap"
+      - "Daily EOD data from Yahoo Finance"
+      - "Simple price-change color coding"
+      - "Mobile-responsive single-page layout"
+      - "Two static AdSense banners"
+
+  phase_2:
+    name: "Automation & Real-time Foundation"
+    duration: "Months 4-6"
+    tech_stack_additions:
+      - "Celery + Redis"
+      - "Django REST Framework"
+    features:
+      - "Scheduled daily data updates"
+      - "Basic REST API endpoints"
+      - "Volume opacity visualization"
+      - "Weekly/Monthly timeframe support"
+
+  phase_3:
+    name: "Advanced Visualization Upgrade"
+    duration: "Months 7-9"
+    tech_stack_additions:
+      - "WebGL-optimized Plotly"
+      - "Alpine.js interactivity"
+    features:
+      - "Full Nifty 500 coverage"
+      - "GPU-accelerated rendering"
+      - "Drag-to-compare sectors"
+      - "Hover tooltips with derivatives"
+
+  phase_4:
+    name: "Performance Architecture"
+    duration: "Months 10-12"
+    tech_stack_additions:
+      - "Redis MemoryDB caching"
+      - "AWS CloudFront CDN"
+    features:
+      - "Sub-second heatmap loads"
+      - "Cached historical patterns"
+      - "Global accelerator routing"
+      - "Smart ad loading system"
+
+  phase_5:
+    name: "Historical Pattern Engine"
+    duration: "Months 13-15"
+    tech_stack_additions:
+      - "TimescaleDB extension"
+      - "Pandas+Numba processing"
+    features:
+      - "10-year historical view"
+      - "Election cycle patterns"
+      - "Volatility surface modeling"
+      - "Anomaly detection alerts"
+
+  phase_6:
+    name: "Monetization Ecosystem"
+    duration: "Months 16-18"
+    tech_stack_additions:
+      - "HTMX partial loading"
+      - "Lambda@Edge"
+    features:
+      - "Contextual ad targeting"
+      - "Sponsored sector layers"
+      - "Embeddable widgets"
+      - "API rate-limiting system"
+
+  phase_7:
+    name: "Progressive Web App"
+    duration: "Months 19-21"
+    tech_stack_additions:
+      - "Service Workers"
+      - "IndexedDB"
+    features:
+      - "Offline cached heatmaps"
+      - "Push notifications"
+      - "Home screen install"
+      - "Background data sync"
+
+  phase_8:
+    name: "Pattern Recognition Foundation"
+    duration: "Months 22-24"
+    tech_stack_additions:
+      - "Vector similarity indexing"
+      - "WebAssembly compute"
+    features:
+      - "100+ pattern embeddings"
+      - "GPU-powered pattern matching"
+      - "API documentation portal"
+      - "Developer ecosystem tools"
